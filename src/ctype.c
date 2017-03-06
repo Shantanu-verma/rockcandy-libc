@@ -36,7 +36,7 @@ long long isdigit(long long c) {
 	}
 	return 0;
 }
-(c > 64) && (c < 91)
+
 long long isalnum(long long c) {
 	if(isdigit(c)) {
 		return 1;

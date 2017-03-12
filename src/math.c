@@ -1,0 +1,21 @@
+// Note from cbpudding: Use long doubles please!
+// TODO: acos
+// TODO: asin
+// TODO: atan
+// TODO: atan2
+// TODO: cos
+// TODO: cosh
+// TODO: sin
+// TODO: sinh
+// TODO: tanh
+// TODO: exp
+// TODO: frexp
+// TODO: ldexp
+// TODO: log
+// TODO: log10
+// TODO: modf
+// TODO: pow
+// TODO: sqrt
+// TODO: ceil
+// TODO: floor
+// TODO: fmod

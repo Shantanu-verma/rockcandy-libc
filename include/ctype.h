@@ -9,3 +9,5 @@ long long isgraph(long long c);
 long long isspace(long long c);
 long long isprint(long long c);
 long long isxdigit(long long c);
+int tolower(int c);
+int toupper(int c);

@@ -29,4 +29,12 @@ double pow(double p, unsigned q){
    return answer;
 }
 
+// Sqrt faster
+double sqrt(double x){
+  unsigned int i = *(unsigned int*) &x;
+  i  += 127 << 23;
+  i >>= 1;
+  return *(float*) &i;
+}
+
   

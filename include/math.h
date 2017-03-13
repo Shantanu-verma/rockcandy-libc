@@ -1,5 +1,5 @@
-#ifndef _rc_math
-#define _rc_math
+#ifndef _rc_math_H
+#define _rc_math_H
 
 // Useful Constants
 
@@ -41,4 +41,5 @@ double frexp (double, int*);
 double modf (double, double*);
 double fmod (double, double);
 long long abs(long long);
+
 #endif

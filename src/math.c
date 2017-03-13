@@ -22,13 +22,20 @@ double ceil(double num){
 }
 
 // I think its not very fast
-double pow(double p, unsigned q){
-   double answer = 1;
-   uint32_t it = 0;
-   while(++it <= q)
-     answer*=p;
-   return answer;
-}
+// O(log(exp)) Complexity
+double pow(double base,double exp) {
+    if( exp == 0)
+       return 1;
+    float temp = power(base, exp/2);       
+    if (exp % 2 == 0)
+        return temp*temp;
+    else {
+        if(exp > 0)
+            return base*temp*temp;
+        else
+            return (temp*temp)/base; //negative exponent computation 
+    }
+} 
 
 // Sqrt faster
 double sqrt(double x){

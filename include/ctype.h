@@ -1,5 +1,5 @@
-#ifndef _rc_ctype
-#define _rc_ctype
+#ifndef _rc_ctype_H
+#define _rc_ctype_H
 
 long long islower(long long c);
 long long isupper(long long c);

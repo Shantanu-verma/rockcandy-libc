@@ -23,5 +23,5 @@ double ldexp (double, int);
 double frexp (double, int*);
 double modf (double, double*);
 double fmod (double, double);
-
+long long abs(long long);
 #endif

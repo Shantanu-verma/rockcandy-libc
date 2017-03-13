@@ -1,32 +1,24 @@
-typedef unsigned int uint32_t
-#include "math.h"
+// Note from cbpudding: Use long doubles please!
+// TODO: acos
+// TODO: asin
+// TODO: atan
+// TODO: atan2
+// TODO: cos
+// TODO: cosh
+// TODO: sin
+// TODO: sinh
+// TODO: tanh
+// TODO: exp
+// TODO: frexp
+// TODO: ldexp
+// TODO: log
+// TODO: log10
+// TODO: modf
 
-// Minimum cycles
-long long abs(long long value){
-  uint32_t _temp = value >> 31;  
-  value ^= _temp;           
-  value += _temp & 1; 
-  return value;
-  }
-  
-// floor
-double floor(double num){
-  double exp = num - (long)num;
-  return ( num - exp );
-}
-
-// ceil
-double ceil(double num){
-  double exp = num - (long)num;
-  return ( num + ( 1 - exp ));
-}
-
-// I think its not very fast
-// O(log(exp)) Complexity
-double pow(double base,double exp) {
+long double pow(long double base, long double exp) {
     if( exp == 0)
        return 1;
-    float temp = power(base, exp/2);       
+    long double temp = power(base, exp/2);       
     if (exp % 2 == 0)
         return temp*temp;
     else {
@@ -35,14 +27,29 @@ double pow(double base,double exp) {
         else
             return (temp*temp)/base; //negative exponent computation 
     }
-} 
-
-// Sqrt faster
-double sqrt(double x){
-  unsigned int i = *(unsigned int*) &x;
-  i  += 127 << 23;
-  i >>= 1;
-  return *(float*) &i;
 }
 
-  
+long double sqrt(long double x){
+  unsigned long long i = *(unsigned int*) &x;
+  i  += 127 << 23;
+  i >>= 1;
+  return *(long double*) &i;
+}
+
+long double ceil(long double num){
+  long double exp = num - (long long)num;
+  return ( num + ( 1 - exp ));
+}
+
+// TODO: fabs
+
+long long abs(long long value){
+  return value & 0x7FFFFFFFFFFFFFFF;
+}
+
+long double floor(long double num){
+  long double exp = num - (long long)num;
+  return ( num - exp );
+}
+
+// TODO: fmod
